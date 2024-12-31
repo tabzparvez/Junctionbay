@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Professional e-commerce store template">
-    <title>Shopify Store Replica</title>
+    <title>Junctionbay</title>
     <link rel="stylesheet" href="styles.css">
     <script src="scripts.js" defer></script>
 </head>
@@ -68,5 +68,15 @@
     <footer class="footer">
         <p>&copy; 2024 Your Store Name. All Rights Reserved.</p>
     </footer>
+
+    <!-- Theme Liquid Template -->
+    <script type="text/template" id="theme-template">
+        {% if section.settings.enable_cart %}
+        <div class="cart-summary">
+            <p>Your cart has {{ cart.item_count }} items.</p>
+        </div>
+        {% endif %}
+    </script>
+
 </body>
 </html>
