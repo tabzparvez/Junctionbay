@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junctionbay - Online Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background: #eaeaea;
+        }
+
+        .hero h2 {
+            margin: 0 0 10px;
+            font-size: 28px;
+        }
+
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        .category {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 250px;
+            padding: 15px;
+            text-align: center;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .category img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .category h3 {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+
+        .category button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 14px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .category button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer .icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        footer .icons img {
+            width: 30px;
+            height: 30px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        @media (max-width: 768px) {
+            .categories {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .category {
+                width: 90%;
+            }
+        }
+    </style>
+    <script>
+        const cart = [];
+
+        function addToCart(productName) {
+            cart.push(productName);
+            alert(`${productName} added to cart!`);
+        }
+
+        function buyNow(productName) {
+            alert(`You are purchasing ${productName}`);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Junctionbay</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#categories">Products</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About Us</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Welcome to Junctionbay</h2>
+        <p>Your one-stop online store for household essentials, kitchen gadgets, baby care, car accessories, and smartwatches!</p>
+    </section>
+
+    <section id="categories" class="categories">
+        <!-- Household -->
+        <div class="category">
+            <img src="https://via.placeholder.com/250" alt="Household">
+            <h3>Household</h3>
+            <button onclick="addToCart('Household')">Add to Cart</button>
+            <button onclick="buyNow('Household')">Buy Now</button>
+        </div>
+
+        <!-- Kitchen Gadgets -->
+        <div class="category">
+            <img src="https://via.placeholder.com/250" alt="Kitchen Gadgets">
+            <h3>Kitchen Gadgets</h3>
+            <button onclick="addToCart('Kitchen Gadgets')">Add to Cart</button>
+            <button onclick="buyNow('Kitchen Gadgets')">Buy Now</button>
+        </div>
+
+        <!-- Baby Care -->
+        <div class="category">
+            <img src="https://via.placeholder.com/250" alt="Baby Care">
+            <h3>Baby Care</h3>
+            <button onclick="addToCart('Baby Care')">Add to Cart</button>
+            <button onclick="buyNow('Baby Care')">Buy Now</button>
+        </div>
+
+        <!-- Car Accessories -->
+        <div class="category">
+            <img src="https://via.placeholder.com/250" alt="Car Accessories">
+            <h3>Car Accessories</h3>
+            <button onclick="addToCart('Car Accessories')">Add to Cart</button>
+            <button onclick="buyNow('Car Accessories')">Buy Now</button>
+        </div>
+
+        <!-- Smart Watches -->
+        <div class="category">
+            <img src="https://via.placeholder.com/250" alt="Smart Watches">
+            <h3>Smart Watches</h3>
+            <button onclick="addToCart('Smart Watches')">Add to Cart</button>
+            <button onclick="buyNow('Smart Watches')">Buy Now</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>Powered by Tabish Parvez</p>
+        <p>Location: Gulshan-e-Iqbal, Karachi | Postal Code: 75300</p>
+        <div class="icons">
+            <img src="https://via.placeholder.com/30" alt="Delivery Icon" title="Delivery">
+            <img src="https://via.placeholder.com/30" alt="Contact Icon" title="Contact">
+            <img src="https://via.placeholder.com/30" alt="Email Icon" title="Email">
+            <img src="https://via.placeholder.com/30" alt="Social Media Icon" title="Social Media">
+        </div>
+    </footer>
+</body>
+</html>
